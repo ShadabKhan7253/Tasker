@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Card,
-  TextField,
   Button,
   Container,
   Grid,
@@ -13,8 +12,8 @@ import {
   Chip,
 } from '@mui/material';
 import Header from './components/Header';
-import DataSaverOnOutlinedIcon from '@mui/icons-material/DataSaverOnOutlined';
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import TaskForm from './TaskForm';
+
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 const App = () => {
@@ -22,27 +21,7 @@ const App = () => {
     <div>
       <Header />
       <Container maxWidth="lg" sx={{ marginTop: 4 }}>
-        <Grid container justifyContent="center">
-          <Grid item xs={12}>
-            <Card sx={{ padding: 4 }} raised="true">
-              <Grid container spacing={2} alignItems="center">
-                <Grid item xs={8}>
-                  <TextField id="task-input" label="Insert your task" fullWidth />
-                </Grid>
-                <Grid item xs={2}>
-                  <Button variant="contained" color="primary" fullWidth>
-                    <DataSaverOnOutlinedIcon /> Submit
-                  </Button>
-                </Grid>
-                <Grid item xs={2}>
-                  <Button variant="contained" color="secondary" fullWidth>
-                    <DeleteOutlinedIcon /> Clear
-                  </Button>
-                </Grid>
-              </Grid>
-            </Card>
-          </Grid>
-        </Grid>
+        <TaskForm />
         <Grid container justifyContent="center" sx={{ marginTop: 4 }}>
           <Grid item xs={12}>
             <Card sx={{ padding: 1 }} raised="true">
