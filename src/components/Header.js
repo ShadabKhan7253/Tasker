@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../tasker-logo.png';
 import { AppBar, Toolbar, Typography, Container } from '@mui/material';
 
-const Header = () => {
+export const Header = () => {
   return (
     <AppBar position="static" sx={{ background: '#333' }}>
       <Container maxWidth="lg">
@@ -15,5 +15,3 @@ const Header = () => {
     </AppBar>
   );
 };
-
-export default Header;
